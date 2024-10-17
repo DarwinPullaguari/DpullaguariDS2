@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DpullaguariDS2.Views.VHome"
+             Title="VHome">
+    <VerticalStackLayout>
+        <Label 
+            Text="Sistema de Calificaciones"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="20"
+            FontAttributes="Bold"/>
+
+        <Picker x:Name="pkNombresEstudiantes"
+                Title="Estudiantes"
+                BackgroundColor="Orange"
+                FontAttributes="Bold"
+                TextColor="White">
+            <Picker.Items>
+                <x:String>Alejandro</x:String>
+                <x:String>Andres</x:String>
+                <x:String>Paula</x:String>
+                <x:String>Wilson</x:String>
+                <x:String>Gabriel</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label
+            Text="Parcial 1"
+            FontSize="35"
+            FontAttributes="Bold"
+            TextColor="DarkOrange"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nota de seguimiento 1" 
+                   Grid.Row="0" Grid.Column="0" />
+            <Entry x:Name="NotaSeguimientoEntry" Placeholder="0 - 10"
+                   Grid.Row="0" Grid.Column="1"
+                   Keyboard="Numeric" MaxLength="2" Margin="5"
+                   VerticalOptions="Center" HorizontalOptions="Center"
+                   TextChanged="OnEntryTextChanged" />
+
+            <Label Text="Nota Examen 1" 
+                   Grid.Row="1" Grid.Column="0" />
+            <Entry x:Name="NotaExamenEntry" Placeholder="0 - 10"
+                   Grid.Row="1" Grid.Column="1"
+                   Keyboard="Numeric" MaxLength="2" Margin="5"
+                   VerticalOptions="Center" HorizontalOptions="Center"
+                   TextChanged="OnEntryTextChanged" />
+
+            <Label Text="Nota Parcial 1" 
+                   Grid.Row="3" Grid.Column="0" />
+            <Label x:Name="ResultadoLabel" 
+                   Grid.Row="3" Grid.Column="1"
+                   VerticalOptions="Center" HorizontalOptions="Center"
+                   FontAttributes="Bold" TextColor="DarkOrange" />
+        </Grid>
+
+
+
+        <Label
+    Text="Parcial 2"
+    FontSize="35"
+    TextColor="DarkOrange"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nota de seguimiento 2" 
+           Grid.Row="0" Grid.Column="0" />
+            <Entry x:Name="NotaSeguimiento2Entry" Placeholder="0 - 10"
+           Grid.Row="0" Grid.Column="1"
+           Keyboard="Numeric" MaxLength="2" Margin="5"
+           VerticalOptions="Center" HorizontalOptions="Center"
+           TextChanged="OnEntryTextChanged2" />
+
+            <Label Text="Nota Examen 2" 
+           Grid.Row="1" Grid.Column="0" />
+            <Entry x:Name="NotaExamen2Entry" Placeholder="0 - 10"
+           Grid.Row="1" Grid.Column="1"
+           Keyboard="Numeric" MaxLength="2" Margin="5"
+           VerticalOptions="Center" HorizontalOptions="Center"
+           TextChanged="OnEntryTextChanged2" />
+
+            <Label Text="Nota Parcial 2" 
+           Grid.Row="3" Grid.Column="0" />
+            <Label x:Name="ResultadoLabel2" 
+           Grid.Row="3" Grid.Column="1"
+           VerticalOptions="Center" HorizontalOptions="Center"
+           FontAttributes="Bold" TextColor="DarkOrange" />
+        </Grid>
+
+        <Label
+    Text="Nota Final"
+    FontSize="35"
+    FontAttributes="Italic"
+    TextColor="DarkOrange"
+    Margin="10"/>
+
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nota Final"
+           Grid.Row="0" Grid.Column="0"
+           FontAttributes="Bold"/>
+
+            <Label x:Name="NotaFinalLabel"
+       Grid.Row="0" Grid.Column="1"
+       VerticalOptions="Center" HorizontalOptions="Center"
+       FontAttributes="Bold" TextColor="Blue" />
+
+        </Grid>
+
+
+        <Button x:Name="btnMostrar"
+                Text="Calcular notas de calificaciones"
+                Clicked="btnMostrar_Clicked"
+                BackgroundColor="Red"/>
+    </VerticalStackLayout>
+</ContentPage>
